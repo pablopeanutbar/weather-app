@@ -48,12 +48,13 @@ const isNight = weather.data?.current?.is_day === 0;
     <Card /> : <h2 style={{fontSize:"larger",
       textShadow:"2px",
       backgroundColor: 'rgba(29, 28, 28, 0.15)',
-      border: '1px solid rgba(90, 83, 83, 0.3)',
+      border: '1px solid rgb(224, 218, 218)',
       padding: '8px 16px',
       borderRadius: '8px',
       marginBottom: '16px',
+      marginTop:'16px',
       fontWeight: '500'
-      }}>No location found/choosen yet</h2>}
+      }}>No location choosen yet</h2>}
       </div>
      </div>
     </>
