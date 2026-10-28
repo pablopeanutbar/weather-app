@@ -31,8 +31,6 @@ const isNight = weather.data?.current?.is_day === 0;
 
     <Input />
 
-     {/* <Button /> */}
-
      {weather.errorMsg && (
     <p style={{
       color: '#ffffffff',
