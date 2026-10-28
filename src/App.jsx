@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import Card from './components/Card'
 import Input from './components/Input'
 import { useWeather } from './context/Weather'
-import Button from './components/Button'
 import CloudShader from './components/CloudShader'
 import StarsBackground from './components/StarsBackground'
 
