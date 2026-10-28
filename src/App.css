@@ -242,3 +242,55 @@
   font-size: 0.95rem;
   font-weight: 700;
 }
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  /* 1. Scale down the title */
+  .weather-app h1 {
+    font-size: 1.85rem !important;
+    margin-top: 10px;
+  }
+
+  .weather-app {
+    padding: 20px 12px;
+  }
+
+  /* 2. Remove fixed position & allow flexible card height */
+  .spotlight-card,
+  .spotlight-card.night {
+    position: relative !important;
+    left: auto !important;
+    transform: none !important;
+    width: 95vw !important;
+    height: auto !important;
+    min-height: auto !important;
+    margin: 20px auto !important;
+    padding: 18px 14px !important;
+  }
+
+  /* 3. Adjust text sizing so everything fits neatly */
+  .main-temp {
+    font-size: 2.4rem !important;
+  }
+
+  .weather-main-icon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .location-name {
+    font-size: 1.35rem !important;
+  }
+
+  .condition-title {
+    font-size: 1.05rem !important;
+  }
+
+  /* 4. Bottom grid becomes neat 2x2 tiles */
+  .weather-bottom-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    margin-top: 16px !important;
+    padding-top: 14px !important;
+  }
+}
