@@ -5,6 +5,7 @@ import Input from './components/Input'
 import { useWeather } from './context/Weather'
 import Button from './components/Button'
 import CloudShader from './components/CloudShader'
+import StarsBackground from './components/StarsBackground'
 
 
 
@@ -15,15 +16,23 @@ useEffect(()=> {
   weather.getUserLocationAndData();
 },[])
 
+const isNight = weather.data?.current?.is_day === 0;
+
   return (
     <>
     
     <div className='cloud-bg'>
-    <CloudShader />
-      <div className='weather-app'>
+    {isNight?<StarsBackground />:<CloudShader />}
+
+
+     <div className='weather-app'>
+
     <h1>What's The Weather?</h1>
-     <Input />
-     <Button />
+
+    <Input />
+
+     {/* <Button /> */}
+
      {weather.errorMsg && (
     <p style={{
       color: '#ffffffff',
@@ -38,9 +47,8 @@ useEffect(()=> {
     </p>
   )}
 
-     
     {weather.data?
-     <Card /> : <h2 style={{fontSize:"larger",
+    <Card /> : <h2 style={{fontSize:"larger",
       textShadow:"2px",
       backgroundColor: 'rgba(29, 28, 28, 0.15)',
       border: '1px solid rgba(90, 83, 83, 0.3)',
